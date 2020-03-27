@@ -6,15 +6,15 @@ export default class FlatListBasics extends Component {
     state = {
         items: [
             {
-                key: 1,
+                key: "1",
                 value: "one"
             },
             {
-                key: 2,
+                key: "2",
                 value: "too"
             },
             {
-                key: 3,
+                key: "3",
                 value: "tee"
             }
         ],
