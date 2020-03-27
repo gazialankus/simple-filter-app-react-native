@@ -84,6 +84,19 @@ export default class FlatListBasics extends Component {
                     />
                 </View>
                 <View style={{flex: 1}}>
+                    <Button title={"Request"} onPress={() => {
+                        console.log("hele");
+                        fetch("http://5e7e014bfa19eb001651a381.mockapi.io/todos/1")
+                            .then((response) => response.json())
+                            .then((json) => {
+                                console.log(JSON.stringify(json));
+                            })
+                            .catch((error) => {
+                                console.error(error);
+                            });
+                    }}/>
+                </View>
+                <View style={{flex: 1}}>
                     <AddItemComponent instruction={"Enter the new item"} onAddClicked={(item) => {
                         console.log("want to add: " + item);
                         this.setState((prev) => {
